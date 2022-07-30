@@ -6,7 +6,7 @@ const ENTER_KEY = 'Enter';
 
 export function Header() {
   const [name, setName] = useState('');
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  
 
   const handleChange = event => setName(event.target.value);
 
@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <header className="header">
-      <h1>todos</h1>
+      <h1 style={{width: '100%', fontSize: '50px'}}>fairDrive TODOs</h1>
       <input
         className="new-todo"
         placeholder="What needs to be done?"
@@ -33,5 +33,6 @@ export function Header() {
         data-testid="todo-create"
       />
     </header>
+    
   );
 }
